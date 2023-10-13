@@ -6,7 +6,18 @@ function syncLoop2(ms) {
 }
 
 function exec2() {
-    syncLoop2(200);
-    exec3();
-    syncLoop2(200);
+    console.log('exec2');
+    setTimeout(()=>{
+        console.log('exec2 body');
+        syncLoop2(200);
+        addAttributeToDiv();
+        syncLoop2(200);
+    },100)
 }
+
+function addAttributeToDiv() {
+    var div = document.getElementById('targetDiv');
+    div.setAttribute('class', 'div1');
+}
+
+exec2();

@@ -22,6 +22,10 @@ Run a local webserver, i.e. using python on mac
 ````
 python -m SimpleHTTPServer 8000
 ````
+or
+````
+python3 -m http.server 8000
+````
 
 Open the following URL in Chrome:
 
